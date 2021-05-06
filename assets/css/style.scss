@@ -115,7 +115,6 @@ section {
 
   .numbers {
     display: flex;
-    gap: 10px;
     justify-content: space-between;
     flex: 1;
 
@@ -140,7 +139,6 @@ section {
         font-size: 5em;
         line-height: 1em;
         font-weight: 700;
-        color: var(--dark-color);
       }
     }
   }
@@ -239,10 +237,6 @@ section {
       li {
         border-bottom: 1px solid #eee;
         padding: 15px 0;
-      }
-
-      li::before {
-        content: " "
       }
     }
 
