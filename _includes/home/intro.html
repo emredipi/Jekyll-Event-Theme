@@ -1,0 +1,38 @@
+<div class="jumbotron" id="intro">
+    <div class="container">
+        <div class="timer">
+            <div><span id="days"></span>Days</div>
+            <div><span id="hours"></span>Hours</div>
+            <div><span id="minutes"></span>Minutes</div>
+            <div><span id="seconds"></span>Seconds</div>
+        </div>
+        <h1 class="display-4">{{ site.title }}</h1>
+        <p class="lead">Startup day is a one day conference dedicated to exploring your latest project. It is a strong
+            space
+            for collaboration, pitch sessions and group projects that are designed to be our last serious say in getting
+            something out to the world.</p>
+        <hr class="my-4">
+        <p>November 1, 2021</p>
+        <p>9:00 am - 2:00 pm</p>
+        <p>Lifelong Learning Institute</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Call of Paper</a>
+        <a class="btn btn-outline-primary btn-lg" href="#pricing" role="button">Registration</a>
+    </div>
+</div>
+
+<script>
+	let countDownDate = new Date("{{ site.event_date }}").getTime();
+	setInterval(function () {
+		const now = new Date().getTime();
+		const distance = countDownDate - now;
+		const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		document.getElementById('days').innerHTML = days;
+		document.getElementById('hours').innerHTML = hours;
+		document.getElementById('minutes').innerHTML = minutes;
+		document.getElementById('seconds').innerHTML = seconds;
+	}, 1000)
+</script>

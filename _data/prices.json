@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Free",
+    "beforeDiscount": "",
+    "price": 0,
+    "details": [
+      "Get Access to all Sessions",
+      "Unlimited Coffee and Foods",
+      "Meet with Favourite Speakers",
+      "Access to all Audio and Video Files",
+      "Get Access to all Sessions"
+    ]
+  },
+  {
+    "title": "Standard",
+    "beforeDiscount": 150.00,
+    "price": 125.00,
+    "details": [
+      "Get Access to all Sessions",
+      "Unlimited Coffee and Foods",
+      "Meet with Favourite Speakers",
+      "Access to all Audio and Video Files",
+      "Get Access to all Sessions"
+    ]
+  },
+  {
+    "title": "Early Bird",
+    "beforeDiscount": 50.00,
+    "price": 30.00,
+    "details": [
+      "Get Access to all Sessions",
+      "Unlimited Coffee and Foods",
+      "Meet with Favourite Speakers",
+      "Access to all Audio and Video Files",
+      "Get Access to all Sessions"
+    ]
+  }
+]

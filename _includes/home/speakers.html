@@ -1,0 +1,16 @@
+<section class="container" id="speakers">
+    <div class="row">
+        {% for speaker in site.data.speakers %}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="/assets/img/speakers/{{speaker.id}}.png">
+                <div class="speaker-info">
+                    <div class="name">{{ speaker.name }}</div>
+                    <div class="title">{{ speaker.title }}</div>
+                    <div class="company">{{ speaker.company }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,32 @@
+<section class="container" id="pricing">
+    <h1>Pricing</h1>
+    <div class="row">
+        {% for price in site.data.prices %}
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="price-heading">
+                        <h4 class="title">{{ price.title }}</h4>
+                        <del class="beforeDiscount">{{ price.beforeDiscount }}</del>
+                        <span class="price">
+                            {% if price.price != 0 %}
+                                £{{ price.price }}
+                            {% else %}
+                                Free
+                            {% endif %}
+                        </span>
+                    </div>
+                    <ul class="details">
+                        {% for detail in price.details %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% if price.price > 0 %}
+                    <a class="btn btn-primary btn-block">Buy now</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

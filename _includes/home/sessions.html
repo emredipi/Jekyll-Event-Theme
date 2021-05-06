@@ -1,0 +1,19 @@
+<section class="container" id="sessions">
+    <h1>Sessions</h1>
+    {% for session in site.data.sessions %}
+    <div class="card">
+        <div class="card-body">
+            <h4>{{ session.title }}</h4>
+            <p>{{ session.description }}</p>
+            <div class="speaker">
+                {% assign speaker = site.data.speakers[session.speaker_id] %}
+                <span class="image" style="background-image: url(/assets/img/speakers/{{speaker.id}}.png)"></span>
+                <div>
+                    <div>{{ speaker.name }}</div>
+                    <div>{{ speaker.title }} / {{ speaker.company }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
